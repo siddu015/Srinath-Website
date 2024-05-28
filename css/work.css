@@ -1,0 +1,144 @@
+/* --------------------------------- */
+/* ----- Work -----*/
+/* --------------------------------- */
+
+.work-boxes {
+    padding-block-start: var(--gutter-x-large);
+}
+
+.work-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1045px) {
+    .work-boxes {
+        max-inline-size: fit-content;
+        margin-inline: auto;
+    }
+
+    .work-box {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .work-img {
+        margin-block-end: var(--gutter-medium);
+    }
+}
+
+.work-box:not(:last-child) {
+    margin-block-end: var(--gutter-huge);
+}
+
+@media (max-width: 1285px) {
+    .work-box:not(:last-child) {
+        margin-block-end: 8rem;
+    }
+}
+
+.work-img,
+.work-textbox {
+    flex-basis: 49%;
+}
+
+.work-img {
+    max-inline-size: 785px;
+    transition: 0.6s all;
+}
+
+body.light .work-img {
+    box-shadow: var(--shadow);
+}
+
+.work-textbox {
+    max-inline-size: 445px;
+}
+
+@media (max-width: 885px) {
+    .work h2 {
+        margin-block-start: 45px;
+    }
+}
+
+@media (max-width: 485px) {
+    .work h2 {
+        margin-block-start: 0;
+    }
+}
+
+.work-text {
+    margin-block: var(--gutter-micro);
+}
+
+.work-technologies {
+    list-style-position: inside;
+    list-style-type: disc;
+    margin-block-end: var(--gutter-x-small);
+}
+
+.work-links {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gutter-x-small);
+}
+
+.work-links img {
+    block-size: 28px;
+    inline-size: 28px;
+}
+
+body.dark .work-links img {
+    filter: invert(1);
+}
+
+/* Github icon */
+
+.work-links > a:last-child {
+    transition: 0.3s transform ease-in;
+}
+
+.work-links > a:last-child:hover,
+.work-links > a:last-child:focus {
+    transform: scale(1.1);
+}
+
+.work-text,
+.contact-text,
+.work-technologies {
+    font-weight: 300;
+}
+
+.work-textbox h3,
+.work-text,
+.work-technologies,
+.work-links {
+    --delay: 0.2s;
+    animation: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-play-state: paused;
+}
+
+.work-text {
+    animation-delay: var(--delay);
+}
+
+.work-technologies {
+    animation-delay: calc(var(--delay) * 1.5);
+}
+
+.work-links {
+    animation-delay: calc(var(--delay) * 2);
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(45px);
+        opacity: 1;
+    }
+
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}

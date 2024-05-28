@@ -1,0 +1,47 @@
+/* --------------------------------- */
+/* ----- Skills -----*/
+/* --------------------------------- */
+
+.skills-imgs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: var(--gutter-x-large);
+    padding-block-start: var(--gutter-x-large);
+}
+
+.skills-img {
+    block-size: 5rem;
+    inline-size: 5rem;
+}
+
+@media (max-width: 1100px) {
+    .skills-img {
+        block-size: 4rem;
+        inline-size: 4rem;
+    }
+}
+
+@media (max-width: 810px) {
+    .skills-img {
+        block-size: 3rem;
+        inline-size: 3rem;
+    }
+}
+
+@media (max-width: 675px) {
+    .skills-imgs {
+        gap: var(--gutter-large);
+    }
+    .skills-img {
+        block-size: 2.5rem;
+        inline-size: 2.5rem;
+    }
+}
+
+@media (max-width: 340px) {
+    .skills-img {
+        block-size: 2rem;
+        inline-size: 2rem;
+    }
+}

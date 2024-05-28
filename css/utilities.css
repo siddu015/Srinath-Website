@@ -1,0 +1,57 @@
+/* --------------------------------- */
+/* ----- Utilities -----*/
+/* --------------------------------- */
+
+/* Center and constrain the width of page sections */
+
+.container {
+    max-inline-size: var(--site-max-width);
+    margin-inline: auto;
+}
+
+@media (max-width: 1375px) {
+    :root {
+        --site-max-width: 1160px;
+    }
+}
+
+@media (max-width: 1275px) {
+    .container {
+        padding-inline: var(--gutter-small);
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding-inline: var(--gutter-medium);
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        padding-inline: var(--gutter-small);
+    }
+}
+
+/* disable scroll when menu is opened */
+
+.lock-screen {
+    overflow-y: hidden;
+}
+
+/* hides visually and removes from accessibility tree  */
+
+.hidden {
+    visibility: hidden;
+    transform: translateX(-100%);
+}
+
+.transform {
+    transform: translateY(6rem);
+    opacity: 0;
+}
+
+.shown {
+    transition: 0.1s;
+    color: lightgrey;
+}

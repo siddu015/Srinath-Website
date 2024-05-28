@@ -1,0 +1,30 @@
+/* --------------------------------- */
+/* ----- Menu Button -----*/
+/* --------------------------------- */
+
+.menu-btn-container {
+    position: fixed;
+    width: 100%;
+    top: var(--gutter-x-small);
+    left: 0;
+    z-index: 4;
+}
+
+.menu-btn {
+    display: block;
+    margin-inline-start: auto;
+    border: 1px solid var(--border-dark);
+    inline-size: 132px;
+    padding-block: var(--gutter-nano);
+    border-radius: var(--gutter-large);
+    text-decoration: none;
+    background-color: var(--bg-color-secondary);
+    color: var(--important);
+    cursor: pointer;
+}
+
+.menu-btn,
+.nav-items a {
+    font-stretch: 125%;
+    font-weight: 900;
+}

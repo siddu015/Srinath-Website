@@ -1,0 +1,48 @@
+/* Call to Action Button */
+.cta-btn {
+    display: inline-block;
+    position: relative;
+    padding: 0.8rem 2rem; /* Adjust padding as needed */
+    font-weight: bold;
+    font-size: 1.2rem; /* Adjust font size as needed */
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-decoration: none;
+    text-align: center; /* Center text */
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); /* Slower transition */
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(135deg, #ff00ff, #00ffff);
+    background-image: linear-gradient(135deg, #ff00ff, #00ffff);
+    line-height: 1; /* Ensure text is vertically centered */
+}
+
+.cta-btn::after {
+    content: "";
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 0;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); /* Slower transition */
+    background: linear-gradient(135deg, #ff00ff, #00ffff);
+}
+
+.cta-btn:hover {
+    color: #fff;
+}
+
+.cta-btn:hover::after {
+    width: 100%;
+}
+
+.cta-btn:hover {
+    background-image: linear-gradient(135deg, #ff00ff, #00ffff);
+    color: #fff;
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+}
